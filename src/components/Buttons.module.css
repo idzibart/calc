@@ -1,0 +1,22 @@
+button {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: lighter;
+    font-size: 40px;
+    background-color: #7C8363;
+    color: #EDF4F2;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+}
+button[value="+"] {
+    background-color: blue;
+    color: rgb(180, 39, 39);
+  }

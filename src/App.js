@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Buttons from "./components/Buttons";
+import Screen from "./components/Screen";
+import {evaluate} from "mathjs";
+import ClearButton from "./components/ClearButton";
 
 function App() {
+  const [calculations, setCalculations] = useState("");
+
+  function calculationsHandler(value) {
+    if (value === "=") {
+      const result = evaluate(calculations);
+      setCalculations(result);
+    } else {
+      setCalculations((prevCalculations) => prevCalculations + value);
+    }
+  }
+
+  const resetCalculation=()=>{
+    setCalculations('')
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <div className="wrapper">
+        <Screen calculations={calculations} />
+        <Buttons calculationsHandler={calculationsHandler} />
+        <ClearButton resetCalculations={resetCalculation}/>
+      </div>
     </div>
   );
 }

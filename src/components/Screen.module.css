@@ -1,0 +1,10 @@
+.screen {
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 40px;
+    background-color: #EDF4F2;
+    color: #31473A;
+    padding-right: 5%;
+  }
