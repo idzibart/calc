@@ -1,9 +1,13 @@
-import classes from './ClearButton.module.css'
+import classes from "./ClearButton.module.css";
 
-const ClearButton=(props)=>{
-    return <div >
-        <button onClick={props.resetCalculations} className={classes.clear}>CLEAR</button>
-        </div>
-}
+const ClearButton = (props) => {
+  return (
+    <div>
+      <button onClick={props.resetCalculations} className={classes.clear}>
+        CLEAR
+      </button>
+    </div>
+  );
+};
 
-export default ClearButton
+export default ClearButton;

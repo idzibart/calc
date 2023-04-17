@@ -1,12 +1,11 @@
 .clear {
-    height: 100px;
-    width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    background-color: #31473A;
-    color: #7C8363;
-    border: 1px solid black;
-
-  }
+  height: 100px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background-color: #31473a;
+  color: #7c8363;
+  border: 1px solid black;
+}
